@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Axe | Car | HuB</title>
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="/src/input.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+<body class="relative font-poppins">
+
+  <!-- Hero Section -->
+  <div class="hero_section h-[80rem]  md:h-screen w-full bg-[url(/Assests/hero_section_image.jpg)] bg-center bg-no-repeat bg-cover">
+
+    <!-- Navbar -->
+    <div class="nav h-[7rem] w-full bg-black flex justify-between lg:justify-around items-center relative z-50">
+      <!-- Logo -->
+      <div class="logo pl-5 lg:pl-0">
+        <img src="/Assests/Main-Logo.png" class="h-14 lg:h-20" alt="logo"/>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="hamberg block lg:hidden text-white text-[1.8rem] cursor-pointer pr-6">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Desktop Links -->
+<div class="links hidden lg:flex items-center gap-10 text-white text-[1.3rem] cursor-pointer">
+  
+  <!-- Simple Link -->
+  <div class="relative group">
+    <span class="hover:text-yellow-300 duration-500">Homepage</span>
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-yellow-300 group-hover:w-full transition-all duration-500"></span>
+  </div>
+
+  <div class="relative group">
+    <span class="hover:text-yellow-300 duration-500">About Us</span>
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-yellow-300 group-hover:w-full transition-all duration-500"></span>
+  </div>
+
+  <!-- Dropdown Link -->
+  <div class="relative group">
+    <span class="hover:text-yellow-300 duration-500 flex items-center">Services <i class="fa-solid fa-caret-down ml-2"></i></span>
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-yellow-300 group-hover:w-full transition-all duration-1000"></span>
+
+    <!-- Dropdown Menu -->
+    <div class="absolute left-0 top-full mt-2 hidden group-hover:flex flex-col bg-black text-white rounded shadow-md py-2 w-52 z-50">
+      <a href="#" class="px-4 py-2 hover:bg-yellow-400 hover:text-black transition">Our Services</a>
+      <a href="#" class="px-4 py-2 hover:bg-yellow-400 hover:text-black transition">Services Detail</a>
+    </div>
+  </div>
+
+  <!-- Another Dropdown -->
+   <div class="relative group">
+    <span class="hover:text-yellow-300 duration-500 flex items-center">Pages <i class="fa-solid fa-caret-down ml-2"></i></span>
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-yellow-300 group-hover:w-full transition-all duration-1000"></span>
+
+    <!-- Dropdown Menu -->
+    <div class="absolute left-0 top-full mt-2 hidden group-hover:flex flex-col bg-black text-white rounded shadow-md py-2 w-56 z-50">
+      <a href="#" class="px-4 py-2 hover:bg-yellow-400 hover:text-black transition">Pricing Plan</a>
+      <a href="#" class="px-4 py-2 hover:bg-yellow-400 hover:text-black transition">Team</a>
+      <a href="#" class="px-4 py-2 hover:bg-yellow-400 hover:text-black transition">Testimonial</a>
+      <a href="#" class="px-4 py-2 hover:bg-yellow-400 hover:text-black transition">FAQs</a>
+      <a href="#" class="px-4 py-2 hover:bg-yellow-400 hover:text-black transition">Blogs</a>
+      <a href="#" class="px-4 py-2 hover:bg-yellow-400 hover:text-black transition">Blog Detail</a>
+      <a href="#" class="px-4 py-2 hover:bg-yellow-400 hover:text-black transition">Gallery</a>
+      <a href="#" class="px-4 py-2 hover:bg-yellow-400 hover:text-black transition">Error 404</a>
+    </div>
+  </div>
+
+  <div class="relative group">
+    <span class="hover:text-yellow-300 duration-500">Contact Us</span>
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-yellow-300 group-hover:w-full transition-all duration-500"></span>
+  </div>
+</div>
+
+
+      <!-- Desktop Button -->
+      <div class="btn hidden lg:block text-white py-3 px-8 border border-white text-[1.2rem] rounded-full hover:bg-yellow-300 hover:border-black hover:text-black transition duration-500">
+        <button>Make Appointment</button>
+      </div>
+    </div>
+  
+
+        <!-- Mobile Overlay Menu -->
+        <div id="mobileMenu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-95 z-50 transform -translate-x-full transition-transform duration-500 lg:hidden">
+        <div class="flex flex-col gap-6 text-white p-6 text-[1.2rem]">
+    <!-- Header with Logo and Close Icon -->
+    <div class="flex justify-between items-center mb-6">
+      <img src="/Assests/Main-Logo.png" class="h-12" alt="logo" />
+      <i id="closeMenu" class="fa-solid fa-xmark text-[1.8rem] cursor-pointer hover:text-yellow-300"></i>
+    </div>
+
+    <!-- Regular Links -->
+    <div class="relative">
+      <span class="menu-link cursor-pointer hover:text-yellow-300">Homepage</span>
+      <span class="block h-[2px] w-0 bg-yellow-300 transition-all duration-500"></span>
+    </div>
+
+    <div class="relative">
+      <span class="menu-link cursor-pointer hover:text-yellow-300">About Us</span>
+      <span class="block h-[2px] w-0 bg-yellow-300 transition-all duration-500"></span>
+    </div>
+
+    <!-- Services Dropdown (Click to Toggle) -->
+    <div class="relative">
+      <span onclick="toggleDropdown('servicesDropdown')" class="menu-link cursor-pointer hover:text-yellow-300 flex items-center justify-between">
+        Services <i class="fa-solid fa-caret-down ml-2"></i>
+      </span>
+      <span class="block h-[2px] w-0 bg-yellow-300 transition-all duration-500"></span>
+      <div id="servicesDropdown" class="pl-4 mt-2 hidden flex-col">
+        <a href="#" class="block py-1 hover:text-yellow-300">Our Services</a>
+        <a href="#" class="block py-1 hover:text-yellow-300">Service Detail</a>
+      </div>
+    </div>
+
+    <!-- Pages Dropdown (Click to Toggle) -->
+    <div class="relative">
+      <span onclick="toggleDropdown('pagesDropdown')" class="menu-link cursor-pointer hover:text-yellow-300 flex items-center justify-between">
+        Pages <i class="fa-solid fa-caret-down ml-2"></i>
+      </span>
+      <span class="block h-[2px] w-0 bg-yellow-300 transition-all duration-500"></span>
+      <div id="pagesDropdown" class="pl-4 mt-2 hidden flex-col">
+        <a href="#" class="block py-1 hover:text-yellow-300">Pricing Plan</a>
+        <a href="#" class="block py-1 hover:text-yellow-300">Team</a>
+        <a href="#" class="block py-1 hover:text-yellow-300">Testimonial</a>
+        <a href="#" class="block py-1 hover:text-yellow-300">FAQs</a>
+        <a href="#" class="block py-1 hover:text-yellow-300">Blogs</a>
+        <a href="#" class="block py-1 hover:text-yellow-300">Blog Detail</a>
+        <a href="#" class="block py-1 hover:text-yellow-300">Gallery</a>
+        <a href="#" class="block py-1 hover:text-yellow-300">Error 404</a>
+      </div>
+    </div>
+
+    <!-- Contact Link -->
+    <div class="relative">
+      <span class="menu-link cursor-pointer hover:text-yellow-300">Contact Us</span>
+      <span class="block h-[2px] w-0 bg-yellow-300 transition-all duration-500"></span>
+    </div>
+
+    <!-- Button -->
+    <button class="mt-6 text-white py-3 px-6 border border-white rounded-full hover:bg-yellow-300 hover:text-black transition duration-500">
+      Make Appointment
+    </button>
+        </div>
+        </div>
+
+        <!-- text Section -->
+<!-- Mid Section -->
+<div class="mid h-auto w-full mt-[5rem] px-4 md:px-10 md:mt-16 lg:h-[30rem] lg:w-[53rem] lg:mt-[15rem] lg:ml-[22rem]">
+  <h2 class="text-white text-center lg:text-left text-[2.4rem] md:text-[3rem] mt-[2rem] md:mt-0 leading-snug md:leading-[3.5rem] font-poppins font-bold
+              lg:text-[5rem] lg:px-0 lg:mt-0 lg:leading-[6.2rem]">
+    Bring Back the New Car Feel with Our Professional Detailing
+  </h2>
+  <div class="btn mt-6 text-center lg:text-left lg:mt-10">
+    <button class="py-4 px-8 md:py-5 md:px-10 text-[1rem] bg-yellow-400 text-black hover:text-white border font-poppins border-transparent hover:border-white rounded-[1.5rem] md:rounded-[1.7rem] hover:bg-black duration-500 
+                   lg:py-6 lg:px-12 lg:text-[1.3rem] lg:rounded-[2rem]">
+      Let's Get Started
+    </button>
+  </div>
+</div>
+
+<!-- Cards Section -->
+<div class="cards flex flex-col md:gap-5 lg:gap-0 md:flex-row  mt-[10rem] px-4 md:px-10 lg:ml-[70rem] lg:mt-[8rem]">
+  <!-- Card 1 -->
+  <div class="card1 bg-[#303030] rounded-xl p-4 md:p-6 md:w-1/3 h-auto
+              lg:h-[26rem] lg:w-[25rem] lg:rounded-l-3xl">
+    <h2 class="text-white text-[1.4rem] font-bold md:text-[1.6rem] lg:text-[1.8rem]">Advanced Detailing Technology</h2>
+    <p class="text-white text-[1rem] md:text-[1.2rem] mt-3 lg:text-[1.4rem] lg:mt-5 ">
+      Our professional detailing restores your car’s original beauty, leaving it fresh, clean, and like new.Turn back the clock on your car’s appearance with our expert touch.
+
+    </p>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card1 bg-[#3F3F3F] rounded-xl p-4 md:p-6 md:w-1/3 h-auto mt-6 md:mt-0
+              lg:h-[24rem] lg:w-[25rem] lg:mt-[2rem]">
+    <h2 class="text-white text-[1.4rem] font-bold md:text-[1.6rem] lg:text-[1.8rem]">Eco-Friendly Products</h2>
+    <p class="text-white text-[1rem] md:text-[1.2rem] mt-4 lg:text-[1.4rem] lg:mt-5 ">
+      Experience that brand-new car feeling again with our expert detailing that revitalizes every inch.
+    </p>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card1 bg-[#4F4F4F] rounded-xl p-4 md:p-6 md:w-1/3 h-auto mt-6 md:mt-0
+              lg:h-[22rem] lg:w-[25rem] lg:mt-[4rem] lg:rounded-r-3xl">
+    <h2 class="text-white font-bold text-[1.4rem] md:text-[1.6rem] lg:text-[1.8rem]">Satisfaction Guarantee</h2>
+    <p class="text-white text-[1rem] md:text-[1.2rem] mt-4 lg:text-[1.4rem] lg:mt-5 ">
+      We bring back your car’s shine, comfort, and cleanliness through professional detailing services.
+    </p>
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- About Us -->
+<div class="about_us w-full bg-[#111111] flex justify-center  pt-[10rem] md:pt-[2rem] lg:pt-[30rem] px-4">
+  <div class="mid_about flex flex-col lg:flex-row w-full max-w-[130rem]">
+    
+    <!-- Left "ABOUT US" Label -->
+    <div class="about text-[2.2rem] md:text-[2.8rem] lg:text-[3rem] w-full lg:w-[30rem] flex justify-center items-center text-center 
+                text-white font-poppins border-b-2 lg:border-b-0 lg:border-r-2 border-white py-8">
+      ABOUT US
+    </div>
+    
+    <!-- Right Content -->
+    <div class="about_text w-full text-white mt-10 lg:mt-0">
+      <h2 class="text-[2rem] md:text-[2.5rem] lg:text-[3.4rem] px-4 md:px-10 lg:px-[6rem] font-bold font-poppins leading-tight">
+        Our Commitment to Providing Premium Car Detailing Services That 
+        <span class="text-[#FACC15]">
+          Bring Out the Best in Your Vehicle, Ensuring a Showroom Shine <br class="hidden md:block">
+          <span class="border-b border-white">Every Time</span>
+        </span>
+      </h2>
+      
+      <p class="text-[1.1rem] md:text-[1.4rem] lg:text-[1.6rem] px-4 md:px-10 lg:px-[20rem] pt-6 lg:pt-[5rem] leading-relaxed font-poppins">
+        We are committed to delivering premium car detailing services that bring out the very best in your vehicle. With meticulous attention to every detail, we ensure your car is cleaned, restored, and maintained to the highest standards. Our goal is not just to make your car look clean, but to give it a showroom-quality shine that turns heads. Every service is backed by professional techniques and top-grade products to ensure long-lasting, impressive results.
+      </p>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Car Detail -->
+<div class="car_detail w-full text-white bg-[#111111] pt-[10rem] md:pt-[20rem] lg:pt-[25rem] px-4">
+  
+  <!-- Top Text -->
+  <div class="top_text_car_detail text-center">
+    <h2 class="text-[#939393] text-[1.5rem] md:text-[1.8rem] lg:text-[2rem]">OUR TOP SOLUTION</h2>
+    <h1 class="text-[2.2rem] md:text-[2.5rem] lg:text-[3rem] mt-2 font-bold">
+      Comprehensive Car Detailing Solutions for A Flawless Finish
+    </h1>
+    <p class="text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] text-gray-500 mt-4 px-4 md:px-[10rem] lg:px-[25rem]">
+      Experience comprehensive car detailing solutions designed to restore, protect, and enhance your vehicle’s appearance. Our expert team ensures every surface is treated with precision, delivering a flawless finish that looks and feels like new.
+    </p>
+  </div>
+
+  <!-- Car Image -->
+  <div class="mid flex justify-center items-center mt-10">
+    <div class="h-[15rem] md:h-[25rem] lg:h-[30rem] w-full md:w-[50rem] lg:w-[70rem] bg-[url('/Assests/car_image.png')] bg-cover bg-center">
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="cards grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row justify-center items-center mt-[5rem] gap-6 md:gap-10 lg:gap-12">
+    
+    <!-- Card 1 -->
+    <div class="card1 rounded-e-full bg-[#1E1E1E] w-full lg:w-[32rem] lg:h-[22rem] p-6 text-white">
+      <h2 class="text-[1.7rem] md:text-[2rem] lg:text-[2.2rem] text-[#FACC15] mb-4 font-semibold">Exterior Detailing</h2>
+      <p class="text-[1.2rem] lg:text-[1.4rem] mb-6">Thorough cleaning, polishing, and waxing to restore your car’s shine and protect its paint.</p>
+      <a href="#" class="text-[1.2rem] hover:text-yellow-400 duration-500">Read More</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card1 rounded-e-full bg-[#1E1E1E] w-full lg:w-[32rem] lg:h-[22rem] p-6 text-white">
+      <h2 class="text-[1.7rem] md:text-[2rem] lg:text-[2.2rem] text-[#FACC15] mb-4 font-semibold">Interior Detailing</h2>
+      <p class="text-[1.2rem] lg:text-[1.4rem] mb-6">Deep cleaning of seats, carpets, dashboard, and all interior surfaces for a fresh, spotless cabin.</p>
+      <a href="#" class="text-[1.2rem] hover:text-yellow-400 duration-500">Read More</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card1 rounded-e-full bg-[#1E1E1E] w-full lg:w-[32rem] lg:h-[22rem] p-6 text-white">
+      <h2 class="text-[1.7rem] md:text-[2rem] lg:text-[2.2rem] text-[#FACC15] mb-4 font-semibold">Paint Correction</h2>
+      <p class="text-[1.2rem] lg:text-[1.4rem] mb-6">Removing swirl marks, scratches, and oxidation to bring back a flawless, mirror-like finish.</p>
+      <a href="#" class="text-[1.2rem] hover:text-yellow-400 duration-500">Read More</a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card1 rounded-e-full bg-[#1E1E1E] w-full lg:w-[32rem] lg:h-[22rem] p-6 text-white">
+      <h2 class="text-[1.7rem] md:text-[2rem] lg:text-[2.2rem] text-[#FACC15] mb-4 font-semibold">Ceramic Coating</h2>
+      <p class="text-[1.2rem] lg:text-[1.4rem] mb-6">Long-lasting protection against dirt, UV rays, and water spots while enhancing gloss.</p>
+      <a href="#" class="text-[1.2rem] hover:text-yellow-400 duration-500">Read More</a>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+            <!-- Choose Section -->
+             <div class="choose_section h-[100rem] bg-[#111111] w-[100%] flex justify-center items-center">
+                <div class="choose_mid h-[60rem] w-[100rem] bg-pink-200">
+
+                </div>
+             </div>
+
+
+  <script src="soft.js"></script>
+
+</body>
+</html>

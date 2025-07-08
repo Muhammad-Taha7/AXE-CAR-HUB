@@ -290,7 +290,7 @@
 
 
 <!-- Choose Section -->
-<div class="choose_section min-h-screen bg-[#111111] lg:h-[120rem] w-full flex justify-center items-center px-4 lg:pt-[30rem]">
+<div class="choose_section min-h-screen bg-[#111111] lg:h-[120rem] w-full flex justify-center items-center px-4 lg:pt-[20rem]">
   <div class="choose_mid w-full max-w-[110rem] flex flex-col lg:flex-row border-white">
 
     <!-- Left Section -->
@@ -361,6 +361,88 @@
 
 
 
+  <div class="works lg:flex lg:justify-center lg:items-center lg:px-[10rem] bg-[#111111]">
+    
+<!-- How It Works Section -->
+<div class="works_section w-full bg-[#111111] text-white py-24 px-4 lg:px-20">
+  <div class="max-w-[140rem] mx-auto flex flex-col lg:flex-row items-center gap-12">
+    
+    <!-- Left Content -->
+    <div class="w-full lg:w-1/2">
+      <p class="text-[#999999] text-[1.3rem] pt-[3rem] font-medium tracking-wider mb-2 lg:text-[2rem]">HOW IT WORKS</p>
+      <h2 class="text-[1.9rem] md:text-[3rem] lg:text-[4.5rem] font-bold mb-6 leading-tight">
+        Obtain Your Car's History 
+        In Just Three Easy Steps.
+      </h2>
+
+      <!-- CTA Button -->
+      <button class="bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-7 py-3 rounded-full transition text-[1.2rem]">
+        Let's Get In Touch
+      </button>
+
+      <!-- Accordion Steps -->
+      <div class="mt-12 space-y-6" id="accordion">
+
+        <!-- Step 1 -->
+        <div>
+          <h3 onclick="toggleAnswer(1)"
+              class="cursor-pointer text-[1.4rem] font-semibold flex justify-between items-center">
+            01. Book Your Appointment
+            <span id="icon-1" class="text-yellow-400 text-[1.5rem]">+</span>
+          </h3>
+          <div id="answer-1" class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out text-[#cfcfcf] mt-2 text-[1.1rem] leading-relaxed">
+            Choose the detailing service that best fits your needs and schedule an appointment at your convenience.
+            You can book online, call us, or visit our location. We’ll confirm your booking and provide any necessary preparation details.
+          </div>
+        </div>
+        <hr class="border-[#3a3a3a]"/>
+
+        <!-- Step 2 -->
+        <div>
+          <h3 onclick="toggleAnswer(2)"
+              class="cursor-pointer text-[1.4rem] font-semibold flex justify-between items-center">
+            02. We Detail Your Car
+            <span id="icon-2" class="text-yellow-400 text-[1.5rem]">+</span>
+          </h3>
+          <div id="answer-2" class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out text-[#cfcfcf] mt-2 text-[1.1rem] leading-relaxed">
+            Our professional team meticulously cleans, polishes, and protects your car inside and out, using the best tools and products available.
+          </div>
+        </div>
+        <hr class="border-[#3a3a3a]"/>
+
+        <!-- Step 3 -->
+        <div>
+          <h3 onclick="toggleAnswer(3)"
+              class="cursor-pointer text-[1.4rem] font-semibold flex justify-between items-center">
+            03. Enjoy the Shine
+            <span id="icon-3" class="text-yellow-400 text-[1.5rem]">+</span>
+          </h3>
+          <div id="answer-3" class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out text-[#cfcfcf] mt-2 text-[1.1rem] leading-relaxed">
+            Drive away in a sparkling clean vehicle that turns heads and feels brand new. Your satisfaction is our priority.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right Image and Quote -->
+    <div class="w-full lg:w-1/2 relative">
+      <div class="rounded-2xl overflow-hidden shadow-lg h-[40rem] bg-cover bg-center bg-no-repeat" style="background-image: url('/Assests/carjust.jpg')">
+        <!-- Quote Box -->
+        <div class="absolute bottom-8 left-8 right-8 bg-black bg-opacity-80 text-white p-6 rounded-xl text-[1.4rem] font-medium leading-relaxed">
+          “Your car deserves more than a quick wash. Our detailing services are designed to go the extra mile, restoring its beauty and protecting it from the elements, so it continues to turn heads wherever you go.”
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+  </div>
+
+
 
 
 
@@ -373,6 +455,5 @@
 
 
   <script src="soft.js"></script>
-
 </body>
 </html>

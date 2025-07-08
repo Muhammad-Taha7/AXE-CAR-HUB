@@ -66,3 +66,33 @@ const percentageEl = document.getElementById("percentage");
   });
 
   observer.observe(percentageEl);
+
+
+
+
+
+
+
+
+ function toggleAnswer(id) {
+    for (let i = 1; i <= 3; i++) {
+      const content = document.getElementById(`answer-${i}`);
+      const icon = document.getElementById(`icon-${i}`);
+
+      if (i === id) {
+        if (content.classList.contains('max-h-0')) {
+          content.classList.remove('max-h-0');
+          content.classList.add('max-h-[500px]');
+          icon.textContent = '−';
+        } else {
+          content.classList.remove('max-h-[500px]');
+          content.classList.add('max-h-0');
+          icon.textContent = '+';
+        }
+      } else {
+        document.getElementById(`answer-${i}`).classList.remove('max-h-[500px]');
+        document.getElementById(`answer-${i}`).classList.add('max-h-0');
+        document.getElementById(`icon-${i}`).textContent = '+';
+      }
+    }
+  }

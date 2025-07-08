@@ -602,6 +602,10 @@ video {
   z-index: 50;
 }
 
+.z-\[-1\] {
+  z-index: -1;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -685,6 +689,10 @@ video {
 
 .mt-12 {
   margin-top: 3rem;
+}
+
+.ml-\[1\.5rem\] {
+  margin-left: 1.5rem;
 }
 
 .block {
@@ -815,6 +823,26 @@ video {
   height: 32rem;
 }
 
+.h-\[120rem\] {
+  height: 120rem;
+}
+
+.h-\[10rem\] {
+  height: 10rem;
+}
+
+.h-\[30rem\] {
+  height: 30rem;
+}
+
+.h-\[26rem\] {
+  height: 26rem;
+}
+
+.h-\[5rem\] {
+  height: 5rem;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -895,6 +923,18 @@ video {
   width: 35rem;
 }
 
+.w-\[90rem\] {
+  width: 90rem;
+}
+
+.w-\[26rem\] {
+  width: 26rem;
+}
+
+.w-\[5rem\] {
+  width: 5rem;
+}
+
 .max-w-\[130rem\] {
   max-width: 130rem;
 }
@@ -934,6 +974,10 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-rows-2 {
@@ -994,6 +1038,18 @@ video {
 
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-\[10rem\] {
+  gap: 10rem;
+}
+
+.gap-\[6rem\] {
+  gap: 6rem;
+}
+
+.gap-\[7rem\] {
+  gap: 7rem;
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -1180,6 +1236,14 @@ video {
   background-color: rgb(56 47 14 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[bg-\[\#3F3F3F\]\] {
+  background-color: bg-[#3F3F3F];
+}
+
 .bg-opacity-95 {
   --tw-bg-opacity: 0.95;
 }
@@ -1256,6 +1320,10 @@ video {
 
 .p-\[1rem\] {
   padding: 1rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .px-4 {
@@ -1343,6 +1411,11 @@ video {
   padding-right: 1.75rem;
 }
 
+.px-\[20rem\] {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -1417,6 +1490,14 @@ video {
 
 .pt-\[7\.5rem\] {
   padding-top: 7.5rem;
+}
+
+.pt-\[5er\] {
+  padding-top: 5er;
+}
+
+.pt-\[20rem\] {
+  padding-top: 20rem;
 }
 
 .text-center {
@@ -1703,6 +1784,11 @@ video {
 .text-\[\#cfcfcf\] {
   --tw-text-opacity: 1;
   color: rgb(207 207 207 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
 }
 
 .shadow-md {
@@ -2494,6 +2580,10 @@ video {
 
   .lg\:text-\[6rem\] {
     font-size: 6rem;
+  }
+
+  .lg\:text-\[4rem\] {
+    font-size: 4rem;
   }
 
   .lg\:leading-\[6\.2rem\] {

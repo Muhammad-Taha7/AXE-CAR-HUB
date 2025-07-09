@@ -30,6 +30,8 @@ This project is a modern, fully responsive web interface built using **HTML5**, 
 - **Tailwind CSS**
 - **JavaScript (Vanilla)**
 - **AOS (Animate On Scroll) via CDN**
+
+
 ![image](https://github.com/user-attachments/assets/fac42e63-06f5-4d06-8044-92b5e509ff10)
 
 

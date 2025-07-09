@@ -40,7 +40,7 @@ const percentageEl = document.getElementById("percentage");
     started = true;
 
     let counter = 0;
-    const duration = 1300;
+    const duration = 5300;
     const target = 90;
     const increment = target / (duration / 10);
 

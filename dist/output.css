@@ -1291,12 +1291,12 @@ video {
   font-size: 2rem;
 }
 
-.text-\[4rem\] {
-  font-size: 4rem;
+.text-\[3\.4rem\] {
+  font-size: 3.4rem;
 }
 
-.text-\[6\.4rem\] {
-  font-size: 6.4rem;
+.text-\[4rem\] {
+  font-size: 4rem;
 }
 
 .text-base {
@@ -1317,10 +1317,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-\[3\.4rem\] {
-  font-size: 3.4rem;
 }
 
 .font-bold {
@@ -1592,8 +1588,8 @@ video {
     display: block;
   }
 
-  .md\:h-\[0rem\] {
-    height: 0rem;
+  .md\:h-\[15rem\] {
+    height: 15rem;
   }
 
   .md\:h-\[25rem\] {
@@ -1602,6 +1598,14 @@ video {
 
   .md\:h-screen {
     height: 100vh;
+  }
+
+  .md\:h-\[30rem\] {
+    height: 30rem;
+  }
+
+  .md\:h-\[40rem\] {
+    height: 40rem;
   }
 
   .md\:w-1\/3 {

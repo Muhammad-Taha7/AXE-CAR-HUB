@@ -1287,12 +1287,12 @@ video {
   font-size: 2.2rem;
 }
 
-.text-\[2rem\] {
-  font-size: 2rem;
+.text-\[2\.5rem\] {
+  font-size: 2.5rem;
 }
 
-.text-\[3\.4rem\] {
-  font-size: 3.4rem;
+.text-\[2rem\] {
+  font-size: 2rem;
 }
 
 .text-\[4rem\] {
@@ -1588,24 +1588,16 @@ video {
     display: block;
   }
 
-  .md\:h-\[15rem\] {
-    height: 15rem;
-  }
-
   .md\:h-\[25rem\] {
     height: 25rem;
   }
 
-  .md\:h-screen {
-    height: 100vh;
-  }
-
-  .md\:h-\[30rem\] {
-    height: 30rem;
-  }
-
   .md\:h-\[40rem\] {
     height: 40rem;
+  }
+
+  .md\:h-screen {
+    height: 100vh;
   }
 
   .md\:w-1\/3 {
